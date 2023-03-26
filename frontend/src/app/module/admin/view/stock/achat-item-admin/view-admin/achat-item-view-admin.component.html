@@ -1,0 +1,52 @@
+
+<p-dialog [(visible)]="viewDialog" [style]="{width: '70vw'}" header="{{'achatItemTabPan' | translate}}" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        <p-tabView>
+            <p-tabPanel header="Information">
+                <div class="p-grid">
+                    <div class="p-field p-col-12 p-md-4">
+                        <label for="1">{{'Produit' | translate}}</label>
+                        <p-dropdown [options]="produits" [(ngModel)]="item.produit" id="1" [disabled]="true" optionLabel="reference" placeholder="{{'Produit' | translate}}"></p-dropdown>
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <label for="2">{{'Prix unitaire' | translate}}</label>
+                        <p-inputNumber class="p-mb-2 p-mr-2" id="2" [disabled]="true" placeholder="{{'Prix unitaire' | translate}}" [(ngModel)]="item.prixUnitaire"></p-inputNumber>
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <label for="3">{{'Prix vente' | translate}}</label>
+                        <p-inputNumber class="p-mb-2 p-mr-2" id="3" [disabled]="true" placeholder="{{'Prix vente' | translate}}" [(ngModel)]="item.prixVente"></p-inputNumber>
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <label for="4">{{'Quantite' | translate}}</label>
+                        <p-inputNumber class="p-mb-2 p-mr-2" id="4" [disabled]="true" placeholder="{{'Quantite' | translate}}" [(ngModel)]="item.quantite"></p-inputNumber>
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <label for="5">{{'Quantite avoir' | translate}}</label>
+                        <p-inputNumber class="p-mb-2 p-mr-2" id="5" [disabled]="true" placeholder="{{'Quantite avoir' | translate}}" [(ngModel)]="item.quantiteAvoir"></p-inputNumber>
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <label for="6">{{'Remise' | translate}}</label>
+                        <p-inputNumber class="p-mb-2 p-mr-2" id="6" [disabled]="true" placeholder="{{'Remise' | translate}}" [(ngModel)]="item.remise"></p-inputNumber>
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <label for="7">{{'Achat' | translate}}</label>
+                        <p-dropdown [options]="achats" [(ngModel)]="item.achat" id="7" [disabled]="true" optionLabel="reference" placeholder="{{'Achat' | translate}}"></p-dropdown>
+                    </div>
+                </div>
+            </p-tabPanel>
+
+        </p-tabView>
+
+    </ng-template>
+
+    <ng-template pTemplate="footer" >
+        <div class="p-grid-footer">
+            <div>
+                <button pButton pRipple label="Annuler" icon="pi pi-times" class="p-button-outlined" (click)="hideViewDialog()"></button>
+            </div>
+        </div>
+    </ng-template>
+</p-dialog>
+
+
+

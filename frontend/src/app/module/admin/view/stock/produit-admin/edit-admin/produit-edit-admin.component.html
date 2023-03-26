@@ -1,0 +1,78 @@
+        <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'produitTabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'produitTabPan' | translate}}">
+                        <div class="p-grid">
+
+
+                                        <div class="p-field p-col-12 p-md-4">
+                                            <label for="1">{{'produitReference' | translate}}<span style="color: red;">*</span></label>
+                                            <input   appendTo="body" class="p-mb-2 p-mr-2" type="text" pInputText placeholder="{{'produitReference' | translate}}" id="1" [(ngModel)]="item.reference"
+                                                    [ngClass]="{'ng-invalid ng-dirty' : !validProduitReference}"  />
+                                            <small class='p-error' *ngIf='!validProduitReference'>Reference est obligatoire.</small>
+                                        </div>
+
+                                        <div class="p-field p-col-12 p-md-4">
+                                            <label for="2">{{'produitLibelle' | translate}}</label>
+                                            <input   appendTo="body" class="p-mb-2 p-mr-2" type="text" pInputText placeholder="{{'produitLibelle' | translate}}" id="2" [(ngModel)]="item.libelle"
+                                                     />
+                                            
+                                        </div>
+
+                                        <div class="p-field p-col-12 p-md-4">
+                                            <label for="3">{{'produitBarcode' | translate}}</label>
+                                            <input   appendTo="body" class="p-mb-2 p-mr-2" type="text" pInputText placeholder="{{'produitBarcode' | translate}}" id="3" [(ngModel)]="item.barcode"
+                                                     />
+                                            
+                                        </div>
+
+                                        <div class="p-field p-col-12 p-md-4">
+                                            <label for="4">{{'produitDiscription' | translate}}</label>
+                                            <textarea appendTo="body" id="4" pInputTextarea rows="5" cols="30" placeholder="{{'produitDiscription' | translate}}"  [(ngModel)]="item.discription"
+                                                     ></textarea>
+                                            
+                                        </div>
+
+                                        <div class="p-field p-col-12 p-md-4">
+                                            <label for="5">{{'produitPrixAchatMoyen' | translate}}</label>
+                                            <p-inputNumber  appendTo="body" class="p-mb-2 p-mr-2" id="5"
+                                                           placeholder="{{'produitPrixAchatMoyen' | translate}}" [(ngModel)]="item.prixAchatMoyen"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="p-field p-col-12 p-md-4">
+                                            <label for="6">{{'produitQuantite' | translate}}</label>
+                                            <p-inputNumber  appendTo="body" class="p-mb-2 p-mr-2" id="6"
+                                                           placeholder="{{'produitQuantite' | translate}}" [(ngModel)]="item.quantite"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="p-field p-col-12 p-md-4">
+                                            <label for="7">{{'produitSeuilAlert' | translate}}</label>
+                                            <p-inputNumber  appendTo="body" class="p-mb-2 p-mr-2" id="7"
+                                                           placeholder="{{'produitSeuilAlert' | translate}}" [(ngModel)]="item.seuilAlert"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+                        </div>
+                    </p-tabPanel>
+
+                </p-tabView>
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="p-grid-footer">
+                        <div>
+                            <button pButton pRipple label="Annuler" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+                        </div>
+                    <div>
+                        <button pButton pRipple label="Valider" icon="pi pi-check" style="margin:10px" (click)="edit()"></button>
+                    </div>
+                </div>
+            </ng-template>
+
+
+
+    </p-dialog>

@@ -1,0 +1,53 @@
+{
+    "new" : "New",
+    "search": "Search",
+    "export": "Export",
+    "validate": "Validate",
+    "from-to": "Elements from {first} to {last} (total {totalRecords})",
+    "search": "Seach...",
+    "delete": "Delete",
+
+
+    "achatTabPan": "Achat",
+    "achatHeader": "Liste des achats",
+    "achatReference": "Reference",
+    "achatDateAchat": "Date achat",
+    "achatTotal": "Total",
+    "achatTotalPaye": "Total paye",
+    "achatDescription": "Description",
+    "achatClient": "Client",
+    "achatAchatItems": "Achat items",
+    "Achat items": "Achat items",
+
+    "achatItemTabPan": "Achat item",
+    "achatItemHeader": "Liste des achat items",
+    "achatItemProduit": "Produit",
+    "achatItemPrixUnitaire": "Prix unitaire",
+    "achatItemPrixVente": "Prix vente",
+    "achatItemQuantite": "Quantite",
+    "achatItemQuantiteAvoir": "Quantite avoir",
+    "achatItemRemise": "Remise",
+    "achatItemAchat": "Achat",
+
+    "clientTabPan": "Client",
+    "clientHeader": "Liste des clients",
+    "clientCin": "Cin",
+    "clientNom": "Nom",
+    "clientTel": "Tel",
+    "clientEmail": "Email",
+    "clientAdresse": "Adresse",
+    "clientDescription": "Description",
+    "clientCreance": "Creance",
+
+    "produitTabPan": "Produit",
+    "produitHeader": "Liste des produits",
+    "produitReference": "Reference",
+    "produitLibelle": "Libelle",
+    "produitBarcode": "Barcode",
+    "produitDiscription": "Discription",
+    "produitPrixAchatMoyen": "Prix achat moyen",
+    "produitQuantite": "Quantite",
+    "produitSeuilAlert": "Seuil alert"
+}
+
+
